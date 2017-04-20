@@ -1,2 +1,33 @@
 # build-tool
-maven相关的构建工具，比如：checkstyle
+使用方法：
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>2.16</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.nexusy</groupId>
+            <artifactId>build-tool</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+    <executions>
+        <execution>
+            <id>validate</id>
+            <phase>validate</phase>
+            <configuration>
+                <configLocation>checkstyle.xml</configLocation>
+                <encoding>UTF-8</encoding>
+                <consoleOutput>true</consoleOutput>
+                <failsOnError>true</failsOnError>
+                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+            </configuration>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
