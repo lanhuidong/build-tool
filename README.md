@@ -12,6 +12,11 @@
             <artifactId>build-tool</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>7.1.2</version>
+        </dependency>
     </dependencies>
     <executions>
         <execution>
